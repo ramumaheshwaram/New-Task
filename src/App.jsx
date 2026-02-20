@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import { Home } from './Home-components/Home.jsx'
-import { Header } from './components/Header.jsx'
+import { About } from './About-components/About.jsx'
+
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
 
 
       </Routes>

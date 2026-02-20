@@ -7,6 +7,7 @@ import { useState } from 'react'
 export const Header = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCompany, setIsCompany] = useState(false)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -51,11 +52,29 @@ export const Header = () => {
                   </NavLink>
                 </li>
 
-                <li>
-                  <NavLink to="/about" className="nav-link">
-                    About
-                  </NavLink>
-                </li>
+                <li
+                    className="relative"
+                    onMouseEnter={() => setIsCompany(true)}
+                    onMouseLeave={() => setIsCompany(false)}
+                  >
+                    <span className="nav-link block cursor-pointer">
+                        Company ▾
+                      </span>
+
+                    {isCompany && (
+                      <ul className="absolute left-0  bg-white shadow-lg min-w-[180px] ">
+                        <li className="px-4 py-2 hover:bg-gray-100">
+                          <NavLink to="/about">About Us</NavLink>
+                        </li>
+                        <li className="px-4 py-2 hover:bg-gray-100">
+                          <a href="safety.html">Safety</a>
+                        </li>
+                        <li className="px-4 py-2 hover:bg-gray-100">
+                          <a href="careers.html">Careers</a>
+                        </li>
+                      </ul>
+                    )}
+                  </li>
 
                 <li>
                   <NavLink to="/services" className="nav-link">

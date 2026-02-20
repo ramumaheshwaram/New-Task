@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <div >
     <footer className="bg-[#2e3192] text-white py-16 px-8 font-sans relative">
-      <div className=" max-w-7xl mx-auto flex ">
+      <div className=" max-w-7xl mx-auto flex flex-col md:flex-row">
 
         <div className='center-left'>
          <div className='cms-moving cms-moving-3'>
@@ -18,7 +18,7 @@ export const Footer = () => {
        
 
         {/* About Us Section */}
-        <div className="space-y-6 w-[35%]">
+        <div className="space-y-6 md:w-[35%]">
           <h3 className="text-xl font-bold text-white">About Us</h3>
           <p className="text-sm leading-relaxed opacity-90">
             Specialist in <br />
@@ -41,7 +41,7 @@ export const Footer = () => {
         </div>
 
         {/* Quick Links Section */}
-        <div className="space-y-6 w-[18%] ">
+        <div className="space-y-6 md:w-[18%] ">
           <h3 className="text-xl font-bold text-white">Quick Links</h3>
            <ul className="flex justify-between flex-col gap-3 footer-nav">
                 <li>
@@ -71,7 +71,7 @@ export const Footer = () => {
         </div>
 
         {/* Services Section */}
-        <div className="space-y-6 w-[18%] ">
+        <div className="space-y-6 md:w-[18%] ">
           <h3 className="text-xl font-bold  text-white">Services</h3>
        <ul className="flex justify-between flex-col gap-3">
                 <li>
@@ -101,7 +101,7 @@ export const Footer = () => {
         </div>
 
         {/* Newsletter Section */}
-        <div className="space-y-6 w-[18%]  text-white">
+        <div className="space-y-6 md:w-[18%]  text-white">
           <h3 className="text-xl font-bold  text-white">Newsletter</h3>
           <p className="text-sm leading-relaxed opacity-90">
             Sign up for industry alerts, deals, news and insights from Rapido company.
